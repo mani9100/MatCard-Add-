@@ -1,0 +1,16 @@
+<mat-selection-list #laps (selectonChange)="click()">
+  <mat-list-option *ngFor="let Laps of typesOfLaps"[value]="Laps.value">
+    {{Laps.name}}   {{Laps.value}}
+    
+
+  </mat-list-option>
+  <!-- <mat-list-option *ngFor="let Lap of priceOfLaps">
+    {{Lap}} 
+
+  </mat-list-option> -->
+</mat-selection-list>
+
+<p >
+  Total: {{laps.selectedOptions.selected.length}}
+</p>
+<button (selectonChange)="click()">Total:</button>
